@@ -1,0 +1,40 @@
+
+- content_for :css do
+  = stylesheet_link_tag 'domain/index'
+
+- content_for :js_footer do
+  = javascript_include_tag 'domain/index'
+
+.container.page-container
+  %h2.page-header.index-header Available and Checked Domains (1356)
+
+  .actions-area
+    %a.btn.btn-danger Download CSV
+    %a.btn.btn-success Clear Domains
+
+  .content-area
+    %table.table.table-bordered
+      %thead
+        %tr
+          %th.header.domain Domain
+          %th.header.da UDA
+          %th.header.pda PDA
+          %th.header.date Date Added
+          %th.header.options Options
+          %th.header.cloud Anchor Cloud
+      %tbody
+        - 10.times do |t|
+          %tr
+            %td.domain bitesandstingsonline.com
+            %td.da 21.5403
+            %td.pda 23.2403
+            %td.date 2014-07-15 21:43:18 UTC
+            %td.options
+              %a.btn.btn-xs.btn-danger Hide
+            %td.cloud
+              %div.cloud-data Total
+              %div.cloud-data Totalnjfkwefkl dms,a asdk maldm a
+              %div.cloud-data Total sfjksop21mk saldam dlk dlkasm ij
+              %div.cloud-data Total24 223 432 4 cjkdf mkl
+              %div.cloud-data Total dsjkfds9pqn3r 23knjre
+              %div.cloud-data Total ASEjie sm,dsajdkas

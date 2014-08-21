@@ -1,0 +1,1 @@
+//= require plugin_files/jquery.dataTables.min
