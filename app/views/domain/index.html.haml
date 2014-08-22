@@ -5,6 +5,11 @@
 - content_for :js_footer do
   = javascript_include_tag 'domain/index'
 
+  :javascript
+    $(document).ready(function() {
+      window.listControl = new DomainList();
+    });
+
 .container.page-container
   %h2.page-header.index-header Available and Checked Domains (1356)
 
@@ -13,7 +18,7 @@
     %a.btn.btn-success Clear Domains
 
   .content-area
-    %table.table.table-bordered
+    %table.table.table-bordered.main-data
       %thead
         %tr
           %th.header.domain Domain
@@ -26,7 +31,7 @@
         - 10.times do |t|
           %tr
             %td.domain bitesandstingsonline.com
-            %td.da 21.5403
+            %td.da= 21.5403 * (1.1 * t)
             %td.pda 23.2403
             %td.date 2014-07-15 21:43:18 UTC
             %td.options
