@@ -1,3 +1,9 @@
 /*
 *= require plugin_files/jquery.dataTables.min
 */
+
+table.main-data {
+  tfoot {
+    display: table-header-group;
+  }
+}

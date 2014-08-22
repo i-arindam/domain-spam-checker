@@ -27,9 +27,23 @@
           %th.header.date Date Added
           %th.header.options Options
           %th.header.cloud Anchor Cloud
+      %tfoot
+        %tr.search-row
+          %td.header.domain
+            %input.search-box{ placeholder: 'Search this column', type: 'text' }
+          %td.header.da
+            %input.search-box{ placeholder: 'Search this column', type: 'text' }
+          %td.header.pda
+            %input.search-box{ placeholder: 'Search this column', type: 'text' }
+          %td.header.date
+            %input.search-box{ placeholder: 'Search this column', type: 'text' }
+          %td.header.options
+            %input.search-box{ placeholder: 'Search this column', type: 'text' }
+          %td.header.cloud
+            %input.search-box{ placeholder: 'Search this column', type: 'text' }
       %tbody
         - 10.times do |t|
-          %tr
+          %tr.data-row
             %td.domain bitesandstingsonline.com
             %td.da= 21.5403 * (1.1 * t)
             %td.pda 23.2403

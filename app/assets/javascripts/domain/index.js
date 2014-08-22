@@ -7,9 +7,15 @@ function DomainList(config) {
 
 DomainList.prototype._init = function() {
   var that = this;
-  $('table.main-data').DataTable({
+  this.tableControl = $('table.main-data').DataTable({
     deferRender: true,
     lengthChange: false,
+    paging: false
+  });
 
+  this.tableControl.columns().eq(0).each( function(colIdx) {
+    $('input.search-box', that.tableControl.column( colIdx ).footer()).on( 'keyup change', function () {
+      that.tableControl.column( colIdx ).search( this.value ).draw();
+    });
   });
 };
