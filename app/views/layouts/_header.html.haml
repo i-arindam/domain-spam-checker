@@ -1,0 +1,22 @@
+#header.header.clearfix
+  .navbar.navbar-inverse
+    .container
+      %a.logo{href: "#"} SpamChecker
+      %ul.nav.pull-left
+        %li.nav-item
+          %a{ href: '/domains/import' } Import Content
+        %li.nav-item
+          %a{ href: '/anchor_blacklist' } Anchor Blacklist
+        %li.nav-item
+          %a{ href: '/domain_blacklist' } Domain Blacklist
+
+      %ul.nav.pull-right
+        - if @current_user
+          %li.nav-item= @current_user.name
+          %li.nav-item
+            %a{ href: '/logout' } Logout
+        - else
+          %li.nav-item.login
+            %a{ href: '/login' } Login
+          %li.nav-item.signup
+            %a{ href: '/signup' } Signup
