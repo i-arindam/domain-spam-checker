@@ -19,6 +19,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    @current_user = nil
     render json: { success: true, redirect_to: root_url } and return
   end
 end

@@ -11,7 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140824080819) do
+ActiveRecord::Schema.define(version: 20140824095120) do
+
+  create_table "anchor_blacklists", force: true do |t|
+    t.string   "word"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "anchor_blacklists", ["word"], name: "index_anchor_blacklists_on_word", using: :btree
+
+  create_table "domain_anchor_clouds", force: true do |t|
+    t.integer  "domain_id"
+    t.string   "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "domain_anchor_clouds", ["domain_id"], name: "index_domain_anchor_clouds_on_domain_id", using: :btree
+
+  create_table "domain_blacklists", force: true do |t|
+    t.string   "word"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "domain_blacklists", ["word"], name: "index_domain_blacklists_on_word", using: :btree
+
+  create_table "domains", force: true do |t|
+    t.string   "domain_name",                          null: false
+    t.float    "uda",           limit: 24
+    t.float    "pda",           limit: 24
+    t.string   "domain_hash"
+    t.integer  "hidden_reason",            default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "domains", ["domain_hash"], name: "index_domains_on_domain_hash", using: :btree
+  add_index "domains", ["hidden_reason"], name: "index_domains_on_hidden_reason", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
