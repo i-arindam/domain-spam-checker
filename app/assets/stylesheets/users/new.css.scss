@@ -1,0 +1,25 @@
+body {
+  background: #333;
+}
+.jumbotron {
+  width: 50%;
+  margin: 20px auto;
+
+  h1.page-message {
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 40px;
+  }
+
+  form {
+    width: 60%;
+    margin: 0 auto;
+  }
+  input.form-control.input-lg {
+    margin: 10px 0;
+  }
+  button.btn-success {
+    margin: 20px 0;
+  }
+}

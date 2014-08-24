@@ -10,6 +10,9 @@ class UsersController < ApplicationController
     redirect_to root_url and return
   end
 
+  def new
+  end
+
   private
 
   def user_params

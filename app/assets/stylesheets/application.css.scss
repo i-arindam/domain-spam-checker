@@ -10,7 +10,42 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  *= require plugin_files/bootstrap.min
  */
+
+/* Global Styles */
+.header .navbar {
+  border-radius: 0;
+
+  a {
+    color: #D4D0D0;
+    text-decoration: none;
+
+    &:hover {
+      color: #0088cc;
+    }
+  }
+
+  a.logo {
+    display: inline-block;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  ul.nav {
+    display: inline-block;
+
+    &.pull-right {
+      margin-top: 5px;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      color: #D4D0D0;
+    }
+  }
+}
+
+/* End of Global Styles */

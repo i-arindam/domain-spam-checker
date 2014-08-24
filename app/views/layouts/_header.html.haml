@@ -1,8 +1,8 @@
 #header.header.clearfix
   .navbar.navbar-inverse
     .container
-      %a.logo{href: "#"} SpamChecker
-      %ul.nav.pull-left
+      %a.logo{href: "/"} SpamChecker
+      %ul.nav
         %li.nav-item
           %a{ href: '/domains/import' } Import Content
         %li.nav-item
@@ -10,7 +10,7 @@
         %li.nav-item
           %a{ href: '/domain_blacklist' } Domain Blacklist
 
-      %ul.nav.pull-right
+      %ul.nav.pull-right.clearfix
         - if @current_user
           %li.nav-item= @current_user.name
           %li.nav-item
