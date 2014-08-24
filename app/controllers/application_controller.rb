@@ -6,4 +6,9 @@ class ApplicationController < ActionController::Base
   def render_404
     render file: 'public/404.html', status: :not_found, layout: false
   end
+
+  def current_user
+    @current_user ||= User.where(id: session[:user_id]).first if session[:user_id]
+  end
+  helper_method :current_user
 end

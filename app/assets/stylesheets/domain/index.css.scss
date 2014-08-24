@@ -2,8 +2,75 @@
 *= require plugin_files/jquery.dataTables.min
 */
 
+/* dataTable overrides */
+/* hide the search box at top of table */
+.dataTables_filter {
+  display: none;
+}
+
 table.main-data {
+  margin: 30px 0;
+  border-radius: 5px;
+
+  thead,
+  tfoot {
+    background: #fcfcfc;
+    background: -moz-linear-gradient(top,  #fcfcfc 0%, #e5e5e5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#e5e5e5));
+    background: -webkit-linear-gradient(top,  #fcfcfc 0%,#e5e5e5 100%);
+    background: -o-linear-gradient(top,  #fcfcfc 0%,#e5e5e5 100%);
+    background: -ms-linear-gradient(top,  #fcfcfc 0%,#e5e5e5 100%);
+    background: linear-gradient(to bottom,  #fcfcfc 0%,#e5e5e5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#e5e5e5',GradientType=0 );
+  }
+  thead th {
+    border-bottom-color: #CCC;
+  }
+  tfoot td {
+    border-top: none;
+  }
+
   tfoot {
     display: table-header-group;
+  }
+
+  th.domain,
+  td.domain {
+    width: 30%;
+  }
+  th.uda,
+  td.uda {
+    width: 7.5%;
+  }
+  th.pda,
+  td.pda {
+    width: 7.5%;
+  }
+  th.date,
+  td.date {
+    width: 7.5%;
+  }
+  th.options,
+  td.options {
+    width: 7.5%;
+  }
+  th.cloud,
+  td.cloud {
+    width: 40%;
+  }
+
+  td .cloud-data {
+    border: 1px solid #CCC;
+    border-bottom: none;
+    padding: 7px;
+
+    &:nth-child(1) {
+      border-radius: 5px 5px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 5px 5px;
+      border-bottom: 1px solid #CCC;
+    }
   }
 }

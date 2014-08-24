@@ -22,7 +22,7 @@
       %thead
         %tr
           %th.header.domain Domain
-          %th.header.da UDA
+          %th.header.uda UDA
           %th.header.pda PDA
           %th.header.date Date Added
           %th.header.options Options
@@ -30,30 +30,31 @@
       %tfoot
         %tr.search-row
           %td.header.domain
-            %input.search-box{ placeholder: 'Search this column', type: 'text' }
-          %td.header.da
-            %input.search-box{ placeholder: 'Search this column', type: 'text' }
+            %input.search-box.form-control{ type: 'text' }
+          %td.header.uda
+            %input.search-box.form-control{ type: 'text' }
           %td.header.pda
-            %input.search-box{ placeholder: 'Search this column', type: 'text' }
+            %input.search-box.form-control{ type: 'text' }
           %td.header.date
-            %input.search-box{ placeholder: 'Search this column', type: 'text' }
+            %input.search-box.form-control{ type: 'text' }
           %td.header.options
-            %input.search-box{ placeholder: 'Search this column', type: 'text' }
+            %input.search-box.form-control{ type: 'text' }
           %td.header.cloud
-            %input.search-box{ placeholder: 'Search this column', type: 'text' }
+            %input.search-box.form-control{ type: 'text' }
       %tbody
         - 10.times do |t|
           %tr.data-row
             %td.domain bitesandstingsonline.com
-            %td.da= 21.5403 * (1.1 * t)
+            %td.uda= 21.5403 * (1.1 * t)
             %td.pda 23.2403
             %td.date 2014-07-15 21:43:18 UTC
             %td.options
               %a.btn.btn-xs.btn-danger Hide
             %td.cloud
-              %div.cloud-data Total
-              %div.cloud-data Totalnjfkwefkl dms,a asdk maldm a
-              %div.cloud-data Total sfjksop21mk saldam dlk dlkasm ij
-              %div.cloud-data Total24 223 432 4 cjkdf mkl
-              %div.cloud-data Total dsjkfds9pqn3r 23knjre
-              %div.cloud-data Total ASEjie sm,dsajdkas
+              .cloud-container
+                .cloud-data Total
+                .cloud-data Totalnjfkwefkl dms,a asdk maldm a
+                .cloud-data Total sfjksop21mk saldam dlk dlkasm ij
+                .cloud-data Total24 223 432 4 cjkdf mkl
+                .cloud-data Total dsjkfds9pqn3r 23knjre
+                .cloud-data Total ASEjie sm,dsajdkas

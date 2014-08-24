@@ -8,8 +8,12 @@
 </head>
 <body>
 
+<%= render partial: 'header' %>
+
 <%= yield %>
+
 <%= javascript_include_tag 'application' %>
+
 <%= yield :js_footer %>
 
 </body>
