@@ -38,3 +38,4 @@ gem 'capistrano-rails', group: :development
 # Use debugger
 gem 'debugger', group: [:development, :test]
 
+gem 'annotate', group: :development
